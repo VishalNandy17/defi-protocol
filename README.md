@@ -607,7 +607,7 @@ copies or substantial portions of the Software.
 
 ### ⭐ Star us on GitHub — it helps the project grow!
 
-**Built with ❤️ by the DeFi Protocol Team**
+**Built with ❤️ by Vishal Nandy**
 
 [⬆ Back to Top](#-defi-protocol)
 
