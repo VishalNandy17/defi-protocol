@@ -1,0 +1,70 @@
+{
+  "name": "defi-protocol-mobile",
+  "version": "1.0.0",
+  "description": "Mobile dApp for DeFi Protocol",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest",
+    "lint": "eslint .",
+    "build:android": "cd android && ./gradlew assembleRelease",
+    "build:ios": "cd ios && xcodebuild -workspace DeFiProtocol.xcworkspace -scheme DeFiProtocol -configuration Release"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.0",
+    "react-native-web3": "^1.0.0",
+    "ethers": "^5.7.2",
+    "@walletconnect/react-native-dapp": "^1.7.0",
+    "react-native-vector-icons": "^10.0.0",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-svg": "^13.14.0",
+    "react-native-gesture-handler": "^2.12.0",
+    "react-native-reanimated": "^3.4.0",
+    "react-native-safe-area-context": "^4.7.0",
+    "react-native-screens": "^3.25.0",
+    "@react-navigation/native": "^6.1.0",
+    "@react-navigation/stack": "^6.3.0",
+    "@react-navigation/bottom-tabs": "^6.5.0",
+    "react-native-paper": "^5.10.0",
+    "react-native-linear-gradient": "^2.8.0",
+    "react-native-animatable": "^1.3.0",
+    "react-native-modal": "^13.0.0",
+    "react-native-qrcode-svg": "^6.2.0",
+    "react-native-camera": "^4.2.0",
+    "react-native-permissions": "^3.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@react-native/eslint-config": "^0.72.0",
+    "@react-native/metro-config": "^0.72.0",
+    "@tsconfig/react-native": "^3.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-test-renderer": "^18.0.0",
+    "babel-jest": "^29.2.0",
+    "eslint": "^8.19.0",
+    "jest": "^29.2.0",
+    "metro-react-native-babel-preset": "0.76.0",
+    "prettier": "^2.4.0",
+    "react-test-renderer": "18.2.0",
+    "typescript": "4.8.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "keywords": [
+    "react-native",
+    "defi",
+    "ethereum",
+    "web3",
+    "mobile",
+    "dapp"
+  ],
+  "author": "Vishal Nandy",
+  "license": "MIT"
+}
+

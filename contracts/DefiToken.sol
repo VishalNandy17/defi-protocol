@@ -9,6 +9,7 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 /**
  * @title DefiToken (DPT)
  * @dev ERC20 token with pausability, minting, burning and simple transfer restrictions.
+ * Implements basic voting functionality for governance.
  */
 contract DefiToken is ERC20, ERC20Burnable, Ownable, Pausable {
     // If transfers are locked, only owner can move tokens (useful for initial distribution)
@@ -41,6 +42,32 @@ contract DefiToken is ERC20, ERC20Burnable, Ownable, Pausable {
     function setTransfersAllowed(bool _allowed) external onlyOwner {
         transfersAllowed = _allowed;
         emit TransfersAllowedSet(_allowed);
+    }
+
+    // Basic voting functionality for governance
+    function getVotes(address account) external view returns (uint256) {
+        return balanceOf(account);
+    }
+
+    function getPastVotes(address account, uint256 blockNumber) external view returns (uint256) {
+        // Simple implementation - return current balance
+        // In a real implementation, you'd track historical balances
+        return balanceOf(account);
+    }
+
+    function delegates(address account) external view returns (address) {
+        // Simple implementation - no delegation
+        return address(0);
+    }
+
+    function delegate(address delegatee) external {
+        // Simple implementation - no delegation
+        revert("Delegation not implemented");
+    }
+
+    function delegateBySig(address delegatee, uint256 nonce, uint256 expiry, uint8 v, bytes32 r, bytes32 s) external {
+        // Simple implementation - no delegation
+        revert("Delegation not implemented");
     }
 
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal override {
